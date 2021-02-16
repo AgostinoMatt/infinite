@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -180,7 +180,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -309,7 +309,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -410,6 +410,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4129060774870856005, guid: ebf1bfdbab1d0f74f870ec80967e0c8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
+    - target: {fileID: 7063668760424636705, guid: ebf1bfdbab1d0f74f870ec80967e0c8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
+    - target: {fileID: 9189840836652758012, guid: ebf1bfdbab1d0f74f870ec80967e0c8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebf1bfdbab1d0f74f870ec80967e0c8c, type: 3}
 --- !u!4 &4648325197125235721 stripped
@@ -485,6 +500,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4129060774870856005, guid: ebf1bfdbab1d0f74f870ec80967e0c8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
+    - target: {fileID: 7063668760424636705, guid: ebf1bfdbab1d0f74f870ec80967e0c8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
+    - target: {fileID: 9189840836652758012, guid: ebf1bfdbab1d0f74f870ec80967e0c8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebf1bfdbab1d0f74f870ec80967e0c8c, type: 3}
 --- !u!4 &2737491146643770509 stripped
@@ -560,6 +590,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4129060774870856005, guid: ebf1bfdbab1d0f74f870ec80967e0c8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
+    - target: {fileID: 7063668760424636705, guid: ebf1bfdbab1d0f74f870ec80967e0c8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
+    - target: {fileID: 9189840836652758012, guid: ebf1bfdbab1d0f74f870ec80967e0c8c,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8ed083fccd78db4e98afdbc88d145b2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebf1bfdbab1d0f74f870ec80967e0c8c, type: 3}
 --- !u!4 &2737491147756155035 stripped

@@ -4,16 +4,32 @@ using UnityEngine;
 
 public class levelgenerater : MonoBehaviour
 {
-    
+    private const float PLAYER_DISTANCE_SPAWN_LEVEL_PART = 200f;
+
+
     [SerializeField] private Transform level_Start;
     [SerializeField] private Transform levelPart_1;
+    [SerializeField] private Player player;
 
     private Vector3 lastEndPosition;
 
     private void Awake()
     {
         lastEndPosition = level_Start.Find("EndPosition").position;
-        SpawnLevelPart();
+
+        int startingSpawnLevelPart = 5;
+        for (int i = 0; i < startingSpawnLevelPart; i++)
+        {
+            SpawnLevelPart();
+        }
+
+    }
+    private void Update()
+    {
+        if (Vector3.Distance(player.GetPosition(), lastEndPosition) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
+        {
+            SpawnLevelPart();
+        }
     }
 
     private void SpawnLevelPart()
