@@ -8,7 +8,7 @@ public class levelgenerater : MonoBehaviour
 
 
     [SerializeField] private Transform level_Start;
-    [SerializeField] private Transform levelPart_1;
+    [SerializeField] private List<Transform> levelPartList;
     [SerializeField] private Player player;
 
     private Vector3 lastEndPosition;
@@ -29,18 +29,20 @@ public class levelgenerater : MonoBehaviour
         if (Vector3.Distance(player.GetPosition(), lastEndPosition) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
         {
             SpawnLevelPart();
+            Debug.Log("pew");
         }
     }
 
     private void SpawnLevelPart()
     {
-        Transform lastLevelPartTransform = SpawnLevelPart(lastEndPosition);
+        Transform chosenLevelPart = levelPartList[Random.Range(0, levelPartList.Count)];
+        Transform lastLevelPartTransform = SpawnLevelPart(chosenLevelPart, lastEndPosition);
         lastEndPosition = lastLevelPartTransform.Find("EndPosition").position;
     }
 
-    private Transform SpawnLevelPart(Vector3 spawnPosition)
+    private Transform SpawnLevelPart(Transform levelPart, Vector3 spawnPosition)
     {
-        Transform levelPartTransform = Instantiate(levelPart_1, spawnPosition, Quaternion.identity);
+        Transform levelPartTransform = Instantiate(levelPart, spawnPosition, Quaternion.identity);
         return levelPartTransform;
     }
 }
