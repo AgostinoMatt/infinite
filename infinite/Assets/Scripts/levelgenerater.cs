@@ -26,11 +26,13 @@ public class levelgenerater : MonoBehaviour
     }
     private void Update()
     {
-        if (Vector3.Distance(player.GetPosition(), lastEndPosition) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
+        if ((lastEndPosition.z - player.GetPosition().z) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
         {
             SpawnLevelPart();
             Debug.Log("pew");
         }
+        float dist = lastEndPosition.z - player.GetPosition().z;
+        print(dist);
     }
 
     private void SpawnLevelPart()
