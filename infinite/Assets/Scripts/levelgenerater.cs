@@ -11,11 +11,11 @@ public class levelgenerater : MonoBehaviour
     [SerializeField] private List<Transform> levelPartList;
     [SerializeField] private Player player;
 
-    private Vector3 lastEndPosition;
+    private Transform lastEndPosition;
 
     private void Awake()
     {
-        lastEndPosition = level_Start.Find("EndPosition").position;
+        lastEndPosition = level_Start.Find("EndPosition");
 
         int startingSpawnLevelPart = 5;
         for (int i = 0; i < startingSpawnLevelPart; i++)
@@ -26,20 +26,20 @@ public class levelgenerater : MonoBehaviour
     }
     private void Update()
     {
-        if ((lastEndPosition.z - player.GetPosition().z) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
+        if ((lastEndPosition.position.z - player.GetPosition().z) < PLAYER_DISTANCE_SPAWN_LEVEL_PART)
         {
             SpawnLevelPart();
             Debug.Log("pew");
         }
-        float dist = lastEndPosition.z - player.GetPosition().z;
-        print(dist);
+        float dist = lastEndPosition.position.z - player.GetPosition().z;
+        print(lastEndPosition);
     }
 
     private void SpawnLevelPart()
     {
         Transform chosenLevelPart = levelPartList[Random.Range(0, levelPartList.Count)];
-        Transform lastLevelPartTransform = SpawnLevelPart(chosenLevelPart, lastEndPosition);
-        lastEndPosition = lastLevelPartTransform.Find("EndPosition").position;
+        Transform lastLevelPartTransform = SpawnLevelPart(chosenLevelPart, lastEndPosition.position);
+        lastEndPosition = lastLevelPartTransform.Find("EndPosition");
     }
 
     private Transform SpawnLevelPart(Transform levelPart, Vector3 spawnPosition)
