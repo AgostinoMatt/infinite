@@ -158,6 +158,7 @@ MonoBehaviour:
   - {fileID: 6123843929376141080, guid: a8f6c4e571fcfe64c9add1549a4ccc40, type: 3}
   - {fileID: 3325796846930364047, guid: 30b2fbd6fe32fa04d8723fcd88076085, type: 3}
   - {fileID: 8505602460681812442, guid: 90b9af4616121d54ab83b4f390528193, type: 3}
+  - {fileID: 8237488672671460252, guid: 9c311b4f0e927cb46b86ea814fc944aa, type: 3}
   player: {fileID: 6927297193975882080, guid: 973f3f1c4b34aee43ab7efd150273729, type: 3}
 --- !u!4 &679230987
 Transform:
