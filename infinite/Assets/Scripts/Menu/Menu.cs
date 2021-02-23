@@ -7,6 +7,16 @@ public class Menu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("RunnerScene");// SceneManager.GetActiveScene().buildIndex + 1); <---- use that for incrementing levels
+    }
+
+    public void HighScores()
+    {
+        SceneManager.LoadScene("HighScore");
+    }
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
     }
 }
