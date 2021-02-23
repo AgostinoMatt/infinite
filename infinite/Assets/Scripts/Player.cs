@@ -7,12 +7,6 @@ public class Player : MonoBehaviour
     public float moveSpeed = 3f;
     GameObject player;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void FixedUpdate()
     {
         float axis = Input.GetAxis("Horizontal");

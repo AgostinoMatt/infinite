@@ -7,9 +7,6 @@ public class slider : MonoBehaviour
     public float moveSpeed = 10.0f;
     public float floatSpeed = 1.0f;
 
-    //public object GameManager { get; private set; }
-
-    // Update is called once per frame
     void Update()
     {
         Vector3 position = gameObject.transform.position;
@@ -20,5 +17,11 @@ public class slider : MonoBehaviour
             floatSpeed = floatSpeed * -1;
         }
         gameObject.transform.position = position;
+    }
+
+    public void StopMoving()
+    {
+        moveSpeed = 0;
+        floatSpeed = 0;
     }
 }
