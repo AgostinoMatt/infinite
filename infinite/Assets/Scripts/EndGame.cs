@@ -8,6 +8,13 @@ public class EndGame : MonoBehaviour
 {
     //private ScoreTracker scoreTracker = new ScoreTracker();
     public slider slide;
+    //public Player player;
+
+    void Awake()
+    {
+        //slide = GetComponent<slider>();
+        slide = GetComponentInParent<slider>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,5 +26,6 @@ public class EndGame : MonoBehaviour
         slide.moveSpeed = 0;
         slide.floatSpeed = 0;
         GameManager.Instance.speedIncrease = 0;
+        Player.Instance.moveSpeed = 0;
     }
 }
