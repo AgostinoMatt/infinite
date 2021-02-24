@@ -7,7 +7,7 @@ using System.Threading;
 public class EndGame : MonoBehaviour
 {
     //private ScoreTracker scoreTracker = new ScoreTracker();
-    public slider slide;
+    private slider slide;
     //public Player player;
 
     void Awake()
