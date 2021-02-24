@@ -6,23 +6,7 @@ public class Player : MonoBehaviour
 {
     public float moveSpeed = 3f;
     GameObject player;
-
-    private static Player instance = null;
-    public static Player Instance { get { return instance; } }
-
-    void Awake()
-    {
-        if (instance != null && instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-        else
-        {
-            instance = this;
-        }
-        //DontDestroyOnLoad(gameObject);
-    }
+    
 
     private void FixedUpdate()
     {

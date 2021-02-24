@@ -7,13 +7,21 @@ using System.Threading;
 public class EndGame : MonoBehaviour
 {
     //private ScoreTracker scoreTracker = new ScoreTracker();
-    private slider slide;
+    //private slider slide;
     //public Player player;
+
+    public GameObject slide;
+    public GameObject player;
 
     void Awake()
     {
-        //slide = GetComponent<slider>();
-        slide = GetComponentInParent<slider>();
+        //slide = GetComponentInParent<slider>();
+    }
+
+    private void Start()
+    {
+        //GameObject[] slide;
+        
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,9 +31,13 @@ public class EndGame : MonoBehaviour
         //scoreTracker.SetActive();
         //Thread.Sleep(2000);
         //SceneManager.LoadScene("GameOver");
+        slide = GameObject.FindWithTag("Level").GetComponent(slider);
+        player = GameObject.FindWithTag("Player").GetComponent(Player);
+
+        
         slide.moveSpeed = 0;
         slide.floatSpeed = 0;
         GameManager.Instance.speedIncrease = 0;
-        Player.Instance.moveSpeed = 0;
+        player.moveSpeed = 0;
     }
 }
