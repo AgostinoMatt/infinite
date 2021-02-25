@@ -8,19 +8,16 @@ public class ScoreTracker : MonoBehaviour
     public float tempScore = 0;
     public bool isActive = true;
 
+
+    
+
     // Update is called once per frame
     public void Update()
     {
-        tempScore = score;
         if (isActive)
         {
             score += Time.deltaTime;
         }
-        else
-        {
-            score = tempScore;
-        }
-            //Debug.Log(GetScore());
     }
 
     public int GetScore()

@@ -30,8 +30,6 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
         //DontDestroyOnLoad(gameObject);
-        moveSpeed = 10;
-        floatSpeed = 1;
     }
 
     // Update is called once per frame
@@ -49,6 +47,11 @@ public class GameManager : MonoBehaviour
     public float GetScore()
     {
         return scoreTracker.GetScore();
+    }
+
+    public void StopScore()
+    {
+        scoreTracker.SetActive();
     }
    
 

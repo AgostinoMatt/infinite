@@ -7,9 +7,8 @@ using System;
 
 public class EndGame : MonoBehaviour
 {
-    //private ScoreTracker scoreTracker = new ScoreTracker();
     private slider slide;
-    //public Player player;
+    public ScoreTracker scoreTracker;
 
     public GameObject[] slides;
     public GameObject player;
@@ -30,7 +29,8 @@ public class EndGame : MonoBehaviour
     {
         Debug.Log("Splat");
         //play splat anim
-        //scoreTracker.SetActive();
+        //scoreTracker.isActive = false;
+        GameManager.Instance.StopScore();
         
         player = GameObject.FindWithTag("Player");
 
