@@ -7,21 +7,16 @@ using System;
 
 public class EndGame : MonoBehaviour
 {
-    private slider slide;
-    public ScoreTracker scoreTracker;
-
-    public GameObject[] slides;
     public GameObject player;
+
 
     void Awake()
     {
-        slide = GetComponentInParent<slider>();
+        
     }
 
     private void Start()
     {
-        //GameObject[] slide;
-        slides = GameObject.FindGameObjectsWithTag("Level");
         
     }
 
@@ -29,14 +24,17 @@ public class EndGame : MonoBehaviour
     {
         Debug.Log("Splat");
         //play splat anim
-        //scoreTracker.isActive = false;
         GameManager.Instance.StopScore();
-        
-        player = GameObject.FindWithTag("Player");
-
         GameManager.Instance.StopMoving();
-        
+        player = GameObject.FindWithTag("Player");
         GameManager.Instance.speedIncrease = 0;
         player.GetComponent<Player>().moveSpeed = 0;
+
+        Invoke("loadGameover", 3);
+    }
+
+    public void loadGameover()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
