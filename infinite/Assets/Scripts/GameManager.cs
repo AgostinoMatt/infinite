@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public float speedIncrease = 0.1f;
     private float gameSpeed = 1.0f;
 
+    public float moveSpeed = 10f;
+    public float floatSpeed = 1.0f;
+
     public float GameSpeed { get { return gameSpeed; } }
 
     private ScoreTracker scoreTracker = new ScoreTracker();
@@ -27,6 +30,8 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
         //DontDestroyOnLoad(gameObject);
+        moveSpeed = 10;
+        floatSpeed = 1;
     }
 
     // Update is called once per frame
@@ -67,6 +72,12 @@ public class GameManager : MonoBehaviour
         gameSpeed = 1.0f;
         scoreTracker.ResetScore();
         StartCoroutine(DelayedLevelLoad(3.0f));
+    }
+
+    public void StopMoving()
+    {
+        moveSpeed = 0;
+        floatSpeed = 0;
     }
 
     IEnumerator DelayedLevelLoad(float delay)

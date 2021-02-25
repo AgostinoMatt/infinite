@@ -5,7 +5,7 @@ using UnityEngine;
 public class RemoveAlongX : MonoBehaviour
 {
     private Transform referencePoint;
-    public float pointOfNoReturn = 0f;
+    public float pointOfNoReturn = -50f;
 
     // Use this for initialization
     void Start()
