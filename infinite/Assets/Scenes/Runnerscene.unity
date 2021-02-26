@@ -160,6 +160,7 @@ MonoBehaviour:
   - {fileID: 6252911654303134902, guid: 7dd919fe946643b46bceb6c55d4f66c7, type: 3}
   - {fileID: 4503245064574512751, guid: f5d1d8ea6a4ece643a24a053fd6e58da, type: 3}
   - {fileID: 4052017068689236588, guid: f7ad1113292ee8e45942db2c18d0f24d, type: 3}
+  - {fileID: 8138428681355465470, guid: 2b39c07ba9e469f49af33e265219561b, type: 3}
   player: {fileID: 6927297193975882080, guid: 973f3f1c4b34aee43ab7efd150273729, type: 3}
 --- !u!4 &679230987
 Transform:
