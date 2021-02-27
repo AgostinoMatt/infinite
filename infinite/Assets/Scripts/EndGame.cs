@@ -7,18 +7,7 @@ using System;
 
 public class EndGame : MonoBehaviour
 {
-    public GameObject player;
-
-
-    void Awake()
-    {
-        
-    }
-
-    private void Start()
-    {
-        
-    }
+    private GameObject player;
 
     private void OnTriggerEnter(Collider other)
     {
