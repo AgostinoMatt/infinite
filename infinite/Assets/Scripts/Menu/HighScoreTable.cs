@@ -13,7 +13,7 @@ public class HighScoreTable : MonoBehaviour
     private void Awake()
     {
         entryContainer = transform.Find("highScoreEntryContainer");
-        entryTemplate = entryContainer.Find("highScoreEntry");
+        entryTemplate = transform.Find("highScoreEntryTemplate");
 
         entryTemplate.gameObject.SetActive(false);
 
