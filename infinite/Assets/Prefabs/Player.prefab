@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 3580986631079355965}
   - component: {fileID: 7164154286322224868}
   - component: {fileID: 5077370495774925608}
+  - component: {fileID: 8634794639479862801}
   m_Layer: 0
   m_Name: Slime Trail
   m_TagString: Untagged
@@ -5042,6 +5043,20 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &8634794639479862801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6485626654141819525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc74e7f774f6bb343ad2b2eba4da8f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  speedIncrease: 0.1
 --- !u!1 &6927297193975882079
 GameObject:
   m_ObjectHideFlags: 0
