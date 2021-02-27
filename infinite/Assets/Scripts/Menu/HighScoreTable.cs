@@ -17,6 +17,17 @@ public class HighScoreTable : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);
 
+        float templateHeight = 20f;
+        for(int i = 0; i < 10; i++)
+        {
+            Transform entryTransform = Instantiate(entryTemplate, entryContainer);
+            RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
+            entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * i);
+            entryTransform.gameObject.SetActive(true);
+
+        }
+
+        /*
         highScoreEntryList = new List<HighScoreEntry>()
         {
             new HighScoreEntry{ score = 511825, name = "AAA" },
@@ -47,10 +58,11 @@ public class HighScoreTable : MonoBehaviour
         {
             CreateHighScoreEntryTransform(highScoreEntry, entryContainer, highScoreEntryTransformList);
         }
-
+        */
         
     }
 
+    /*
         private void CreateHighScoreEntryTransform(HighScoreEntry highScoreEntry, Transform container, List<Transform> transformList)
     {
             float templateHeight = 30f;
@@ -81,7 +93,11 @@ public class HighScoreTable : MonoBehaviour
             entryTransform.Find("nameText").GetComponent<Text>().text = name;
 
         transformList.Add(entryTransform);
+
+        
     }
+    */
+        
     
 
     /*
