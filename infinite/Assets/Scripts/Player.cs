@@ -25,4 +25,8 @@ public class Player : MonoBehaviour
         return transform.position;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
 }

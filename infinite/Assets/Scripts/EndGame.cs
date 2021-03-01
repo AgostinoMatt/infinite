@@ -8,14 +8,19 @@ using System;
 public class EndGame : MonoBehaviour
 {
     private GameObject player;
+    private Animator anim;
 
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Splat");
+        player = GameObject.FindWithTag("Player");
+        anim = player.GetComponentInChildren<Animator>();
+        anim.SetBool("hit", true);
+
         //play splat anim
         GameManager.Instance.StopScore();
         GameManager.Instance.StopMoving();
-        player = GameObject.FindWithTag("Player");
+        
         GameManager.Instance.speedIncrease = 0;
         player.GetComponent<Player>().moveSpeed = 0;
 

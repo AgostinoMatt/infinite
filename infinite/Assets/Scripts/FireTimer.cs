@@ -10,7 +10,7 @@ public class FireTimer : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        Debug.Log(timer);
+        //Debug.Log(timer);
         if (timer >= 2)
         {
             this.gameObject.SetActive(false);
