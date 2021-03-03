@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
 
     public Text scoreText;
     public Text highScoreText;
+    public Text highScore;
 
     [SerializeField]
     private float scoreCount;
@@ -87,17 +88,12 @@ public class GameManager : MonoBehaviour
         style.fontSize = 40;
         style.normal.textColor = Color.white;
         GUI.Label(new Rect(50f, 100f, 100f, 50f), "Score: " + scoreTracker.GetScore(), style);
-        GUI.Label(new Rect(50f, 50f, 100f, 50f), "Hi-Score" + scoreTracker.HiScore(), style);
+        GUI.Label(new Rect(50f, 50f, 100f, 50f), "Hi-Score: " + scoreTracker.GetHighScore(), style);
     }
 
     public float GetScore()
     {
         return scoreTracker.GetScore();
-    }
-
-    public void HiScore()
-    {
-        PlayerPrefs.SetInt("HighScore", scoreTracker.GetScore());
     }
 
     public void StopScore()
