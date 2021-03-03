@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private float scoreMultiplier;
 
+    private GUIStyle style = new GUIStyle();
+
     void Awake()
     {
         if (instance != null && instance != this)
@@ -82,12 +84,20 @@ public class GameManager : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(50f, 50f, 100f, 50f), "Score: " + scoreTracker.GetScore());
+        style.fontSize = 40;
+        style.normal.textColor = Color.white;
+        GUI.Label(new Rect(50f, 100f, 100f, 50f), "Score: " + scoreTracker.GetScore(), style);
+        GUI.Label(new Rect(50f, 50f, 100f, 50f), "Hi-Score" + scoreTracker.HiScore(), style);
     }
 
     public float GetScore()
     {
         return scoreTracker.GetScore();
+    }
+
+    public void HiScore()
+    {
+        PlayerPrefs.SetInt("HighScore", scoreTracker.GetScore());
     }
 
     public void StopScore()
