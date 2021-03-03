@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,6 +19,22 @@ public class GameManager : MonoBehaviour
 
     private ScoreTracker scoreTracker = new ScoreTracker();
 
+    public Text scoreText;
+    public Text highScoreText;
+
+    [SerializeField]
+    private float scoreCount;
+
+    [SerializeField]
+    private float highScoreCount;
+
+    public float pointsPerSecond;
+
+    public bool scoreIncreasing;
+
+    [SerializeField]
+    private float scoreMultiplier;
+
     void Awake()
     {
         if (instance != null && instance != this)
@@ -32,11 +49,35 @@ public class GameManager : MonoBehaviour
         //DontDestroyOnLoad(gameObject);
     }
 
+    void Start()
+    {
+        if(PlayerPrefs.HasKey("HighScore"))
+        {
+            highScoreCount = PlayerPrefs.GetFloat("HighScore");
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         scoreTracker.Update();
         gameSpeed += speedIncrease * Time.deltaTime;
+
+
+        scoreMultiplier = 1;
+        if(scoreIncreasing)
+        {
+            scoreCount += pointsPerSecond * scoreMultiplier * Time.deltaTime;
+        }
+
+        if (scoreCount > highScoreCount)
+        {
+            highScoreCount = scoreCount;
+            PlayerPrefs.SetFloat("Highscore", highScoreCount);
+        }
+
+        scoreText.text = "Score: " + Mathf.Round (scoreCount);
+        highScoreText.text = "Score " + Mathf.Round (highScoreCount);
     }
 
     void OnGUI()
@@ -72,9 +113,14 @@ public class GameManager : MonoBehaviour
 
     public void RestartLevel()
     {
+        scoreIncreasing = false;
+
         gameSpeed = 1.0f;
         scoreTracker.ResetScore();
         StartCoroutine(DelayedLevelLoad(3.0f));
+
+        scoreCount = 0;
+        scoreIncreasing = true;
     }
 
     public void StopMoving()
