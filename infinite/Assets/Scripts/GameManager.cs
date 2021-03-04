@@ -44,6 +44,23 @@ public class GameManager : MonoBehaviour
     {
         scoreTracker.Update();
         gameSpeed += speedIncrease * Time.deltaTime;
+<<<<<<< Updated upstream
+=======
+
+
+        scoreMultiplier = 1;
+        if(scoreIncreasing)
+        {
+            scoreCount += pointsPerSecond * scoreMultiplier * Time.deltaTime;
+        }
+
+        if (scoreCount > highScoreCount)
+        {
+            highScoreCount = scoreCount;
+            PlayerPrefs.SetFloat("Highscore", highScoreCount);
+        }
+        
+>>>>>>> Stashed changes
     }
 
     void OnGUI()

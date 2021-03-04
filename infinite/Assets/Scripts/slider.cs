@@ -7,7 +7,7 @@ public class slider : MonoBehaviour
     //public float moveSpeed = GameManager.Instance.moveSpeed;
     //public float floatSpeed = GameManager.Instance.floatSpeed;
 
-    void Update()
+    void FixedUpdate()
     {
         Vector3 position = gameObject.transform.position;
         position.z -= GameManager.Instance.moveSpeed * GameManager.Instance.GameSpeed * Time.deltaTime;
