@@ -7,8 +7,16 @@ public class Menu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("RunnerScene");// SceneManager.GetActiveScene().buildIndex + 1); <---- use that for incrementing levels
+        SceneManager.LoadScene("RunnerScene");
     }
+
+
+    public void Credits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
+
 
     public void GoMenu()
     {
@@ -20,16 +28,8 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene("Settings");
     }
 
-    public void Credits()
-    {
-        SceneManager.LoadScene("Credits");
-    }
-
-<<<<<<< Updated upstream
-=======
-    public void ExitGame()
+    public void GoQuit()
     {
         Application.Quit();
     }
->>>>>>> Stashed changes
 }

@@ -42,25 +42,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreTracker.Update();
-        gameSpeed += speedIncrease * Time.deltaTime;
-<<<<<<< Updated upstream
-=======
-
-
-        scoreMultiplier = 1;
-        if(scoreIncreasing)
-        {
-            scoreCount += pointsPerSecond * scoreMultiplier * Time.deltaTime;
-        }
-
-        if (scoreCount > highScoreCount)
-        {
-            highScoreCount = scoreCount;
-            PlayerPrefs.SetFloat("Highscore", highScoreCount);
-        }
-        
->>>>>>> Stashed changes
     }
 
     void OnGUI()
