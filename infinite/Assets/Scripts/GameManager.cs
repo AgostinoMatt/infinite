@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public float GameSpeed { get { return gameSpeed; } }
 
-    private ScoreTracker scoreTracker = new ScoreTracker();
+    public ScoreTracker scoreTracker;
 
     public Text scoreText;
     public Text highScoreText;
