@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     public float moveSpeed = 3f;
     GameObject player;
 
+    public Joystick joystick;
+
     private Animator anim;
 
     private void Start()
@@ -16,8 +18,8 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float axis = Input.GetAxis("Horizontal");
-
+        //float axis = Input.GetAxis("Horizontal");
+        float axis = joystick.Horizontal;
 
 
         if(axis >= 0.1)
