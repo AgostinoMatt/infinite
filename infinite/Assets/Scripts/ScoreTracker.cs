@@ -17,7 +17,6 @@ public class ScoreTracker : MonoBehaviour
         if (isActive)
         {
             score += Time.deltaTime;
-            Debug.Log("boo");
             if (score > PlayerPrefs.GetFloat("HiScore", 0))
             {
                 PlayerPrefs.SetFloat("HiScore", score);
