@@ -11,7 +11,7 @@ public class slider : MonoBehaviour
     {
         Vector3 position = gameObject.transform.position;
         position.z -= GameManager.Instance.moveSpeed * GameManager.Instance.GameSpeed * Time.deltaTime;
-        position.z -= GameManager.Instance.floatSpeed * Time.deltaTime;
+        //position.z -= GameManager.Instance.floatSpeed * Time.deltaTime;
         if (position.z > 4 || position.z < 2)
         {
             GameManager.Instance.floatSpeed = GameManager.Instance.floatSpeed * -1;
