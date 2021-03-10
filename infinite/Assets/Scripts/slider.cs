@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class slider : MonoBehaviour
 {
-    //public float moveSpeed = GameManager.Instance.moveSpeed;
-    //public float floatSpeed = GameManager.Instance.floatSpeed;
 
     void FixedUpdate()
     {

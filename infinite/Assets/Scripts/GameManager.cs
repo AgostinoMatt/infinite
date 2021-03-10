@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance = null;
     public static GameManager Instance { get { return instance; } }
 
-    public float speedIncrease = 0.1f;
+    public float speedIncrease = 0.2f;
     private float gameSpeed = 1.0f;
 
     public float moveSpeed = 10f;
@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        gameSpeed += speedIncrease * Time.deltaTime;
     }
 
     void OnGUI()
