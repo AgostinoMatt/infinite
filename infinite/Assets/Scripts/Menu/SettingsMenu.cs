@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 public class SettingsMenu : MonoBehaviour
 {
@@ -18,5 +19,15 @@ public class SettingsMenu : MonoBehaviour
         audioMixer.FindMatchingGroups("SFX");
         audioMixer.SetFloat("sfxVolume", 0);
         Debug.Log(sfxToggle);
+    }
+
+    public void ResetHiScore ()
+    {
+        PlayerPrefs.SetFloat("HiScore", 0);
+    }
+
+    public void LoadCredits ()
+    {
+        SceneManager.LoadScene("Credits");
     }
 }

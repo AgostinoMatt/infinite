@@ -10,6 +10,10 @@ public class EndGame : MonoBehaviour
     private GameObject player;
     private Animator anim;
 
+    public AudioSource splatSound;
+
+    private Player slimeSound;
+
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Splat");
@@ -23,6 +27,11 @@ public class EndGame : MonoBehaviour
         
         GameManager.Instance.speedIncrease = 0;
         player.GetComponent<Player>().moveSpeed = 0;
+
+        player.GetComponentInChildren<AudioSource>().Stop();
+        //endSlime.Stop();
+
+        splatSound.Play();
 
         Invoke("loadGameover", 3);
     }
