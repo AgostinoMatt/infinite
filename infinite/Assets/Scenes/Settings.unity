@@ -203,7 +203,18 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1310093282}
+        m_MethodName: SetSFX
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
@@ -413,12 +424,12 @@ MonoBehaviour:
   m_MinValue: -80
   m_MaxValue: 0
   m_WholeNumbers: 0
-  m_Value: -18.8
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 527692312}
-        m_MethodName: SetMaster
+      - m_Target: {fileID: 1310093282}
+        m_MethodName: SetVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1128,6 +1139,7 @@ GameObject:
   - component: {fileID: 1310093280}
   - component: {fileID: 1310093279}
   - component: {fileID: 1310093278}
+  - component: {fileID: 1310093282}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1217,6 +1229,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1310093282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310093277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c010fddf9f78144bafe3fa43d97a85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: accb3db2598da504b8070a82b365a327, type: 2}
 --- !u!1 &1350357544
 GameObject:
   m_ObjectHideFlags: 0
@@ -2107,7 +2132,7 @@ AudioSource:
   m_GameObject: {fileID: 1891955461}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -2328697676445578824, guid: 0e5da673034cf7c4c86914b63c6d555e,
+  OutputAudioMixerGroup: {fileID: 24300002, guid: accb3db2598da504b8070a82b365a327,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 62805d9812ada7e41bab741e7ba031e2, type: 3}
   m_PlayOnAwake: 1
