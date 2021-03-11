@@ -30,7 +30,7 @@ public class Settings : MonoBehaviour
     {
         master = PlayerPrefs.GetFloat("Volume");
         sfx = PlayerPrefs.GetFloat("SFX");
-        music = PlayerPrefs.GetFloat("Music");
+        music = PlayerPrefs.GetFloat("MusicVolume");
     }
 
     public void SetMaster(float value)
@@ -78,13 +78,22 @@ public class Settings : MonoBehaviour
 
     public void MuteMusic(bool isMusic)
     {
-        if (isMusic)
-        {
-            SetMusic(80);
-        }
+        bool playmusic = isMusic;
 
+        if (playmusic)
+        {
+            //SetMusic(0);
+            soundMix.SetFloat("musicVol", -80);
+            PlayerPrefs.SetFloat("MusicVolume", -80);
+            PlayerPrefs.Save();
+        }
         else
-            SetMusic(0);
+        {
+            //SetMusic(-80);
+            soundMix.SetFloat("musicVol", 0);
+            PlayerPrefs.SetFloat("MusicVolume", 0);
+            PlayerPrefs.Save();
+        }
     }
 
     public void ResetHiScore()

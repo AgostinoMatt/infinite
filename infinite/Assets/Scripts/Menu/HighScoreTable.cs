@@ -7,7 +7,7 @@ public class HighScoreTable : MonoBehaviour
 {
     private Transform entryContainer;
     private Transform entryTemplate;
-    private List<HighScoreEntry> highScoreEntryList;
+    //private List<HighScoreEntry> highScoreEntryList;
     private List<Transform> highScoreEntryTransformList;
 
     private void Awake()
@@ -102,11 +102,11 @@ public class HighScoreTable : MonoBehaviour
 
     /*
      * Single High Score Entry
-     * */
+     * 
     private class HighScoreEntry
     {
         public int score;
         public string name;
-    }
+    }*/
 
 }
