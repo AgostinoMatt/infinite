@@ -14,16 +14,15 @@ public class Settings : MonoBehaviour
 
     public void Start()
     {
-        music = Settings.instance.music;
-        sfx = Settings.instance.sfx;
+        PlayerPrefs.SetFloat("musicVolume", 0);
 
         master = PlayerPrefs.GetFloat("Volume");
         sfx = PlayerPrefs.GetFloat("SFX");
-        music = PlayerPrefs.GetFloat("Music");
+        music = PlayerPrefs.GetFloat("MusicVolume");
 
         soundMix.SetFloat("masterVol", PlayerPrefs.GetFloat("Volume"));
         soundMix.SetFloat("sfxVol", PlayerPrefs.GetFloat("SFX"));
-        soundMix.SetFloat("musicVol", PlayerPrefs.GetFloat("Volume"));
+        soundMix.SetFloat("musicVol", PlayerPrefs.GetFloat("MusicVolume"));
 
     }
 
