@@ -4,28 +4,19 @@ using UnityEngine;
 
 public class MusicPlayer : MonoBehaviour
 {
-    protected static MusicPlayer instance = null;
+    protected static MusicPlayer musicPlayer;
 
-    public static MusicPlayer Instance
-    {
-        get
-        {
-            return instance;
-        }
-    }
 
     private void Awake()
     {
-        if (instance != null && instance != this)
+        if (musicPlayer == null)
         {
-            Destroy(gameObject);
-            return;
+            musicPlayer = this;
+            DontDestroyOnLoad(musicPlayer);
         }
         else
         {
-            instance = this;
+            Destroy(gameObject);
         }
-
-        DontDestroyOnLoad(gameObject);
     }
 }

@@ -9,10 +9,6 @@ public class Credits : MonoBehaviour
         Application.OpenURL("https://instagram.com/tonernick?igshid=feamp96favu");
     }
 
-    public static void AlexxIcon()
-    {
-        Application.OpenURL("https://www.linkedin.com/in/alexxquan/");
-    }
 
     public static void MattIcon()
     {
